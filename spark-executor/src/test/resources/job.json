@@ -1,0 +1,18 @@
+{
+  "job_uuid": "07987087987-98779878-asdfa-asdfasdf",
+  "output_file_timestamp" : "08151976",
+  "input_files": [{
+    "instance_id": "08151976",
+    "dataset": "employee",
+    "url": "file:../employees.txt",
+    "file_size": 90890898
+  },
+    {
+      "instance_id": "08151976",
+      "dataset": "project",
+      "url": "file:../projects.txt",
+      "file_size": 90890
+    }
+  ],
+  "restart_job": false
+}

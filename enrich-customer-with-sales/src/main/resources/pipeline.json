@@ -1,0 +1,206 @@
+{
+  "id": "bbf34cbb-9ee6-442f-80a8-22886b860933",
+  "metadata": {
+    "type": "batch",
+    "api_version": "1.0.0"
+  },
+  "environments": [{
+    "id": "abc-def",
+    "info": {
+      "url": "r48dd54c",
+      "user": "ReadFile",
+      "pwd": "1.0"
+    }
+  }],
+  "nodes": [{
+      "id": "filereader01",
+      "component_info": {
+        "id": "filereader",
+        "name": "FileReader",
+        "version": "1.0"
+      },
+      "environment_key": "abc-def",
+      "entity": "employee",
+      "conf" : {
+        "position" : 0,
+        "file_type" : "csv",
+        "header" : true,
+        "apply_dq_checks" : true,
+        "dataset": "employee"
+      }
+    },
+    {
+      "id": "filereader02",
+      "component_info": {
+        "id": "filereader",
+        "name": "FileReader",
+        "version": "1.0"
+      },
+      "environment_key": "abc-def",
+      "entity": "project",
+      "conf" : {
+        "position" : 1,
+        "file_type" : "avro",
+        "header" : false,
+        "apply_dq_checks" : true,
+        "dataset": "project"
+      }
+    },
+    {
+      "id": "filter01",
+      "component_info": {
+        "id": "filter",
+        "name": "Filter",
+        "version": "1.0"
+      },
+      "environment_key": "abc-def",
+      "entity" : "employee",
+      "conf" : {
+        "condition": "build query language for filtering"
+      }
+    },
+    {
+      "id": "filter02",
+      "component_info": {
+        "id": "filter",
+        "name": "Filter",
+        "version": "1.0"
+      },
+      "environment_key": "abc-def",
+      "entity" : "project",
+      "conf" : {
+        "condition": "build query language for filtering"
+      }
+    },
+    {
+      "id": "join01",
+      "component_info": {
+        "id": "join",
+        "name": "Join",
+        "version": "1.0"
+      },
+      "environment_key": "abc-def",
+      "conf" : {
+        "join_criteria" : "Build Join Criteria"
+      }
+    },
+    {
+      "id": "project01",
+      "component_info": {
+        "id": "project",
+        "name": "Project",
+        "version": "1.0"
+      },
+      "environment_key": "abc-def",
+      "entity": "employee_projects",
+      "conf" : {
+        "mapping": [
+          {
+            "col1" : "Build Mapping Criteria" ,
+            "col2" : "Build Mapping Criteria",
+            "col3" : "Build Mapping Criteria"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3writer01",
+      "component_info": {
+        "id": "filewriter",
+        "name": "FileWriter",
+        "version": "1.0"
+      },
+      "environment_key": "abc-def",
+      "entity": "employee_projects",
+      "conf" : {
+        "file_location": "s3://....////..//"
+      }
+    },
+    {
+      "id": "sfwriter01",
+      "component_info": {
+        "id": "snowflake",
+        "name": "SnowFlake",
+        "version": "1.0"
+      },
+      "environment_key": "abc-def",
+      "entity": "employee_projects",
+      "conf" : {
+        "snowflake_table": "employee_projects"
+      }
+    }
+
+  ],
+  "connections": [
+    {
+      "from": {
+        "node_id": "filereader01",
+        "port_index": 0
+      },
+      "to": {
+        "node_id": "filter01",
+        "port_index": 0
+      }
+    },
+    {
+      "from": {
+        "node_id": "filereader02",
+        "port_index": 0
+      },
+      "to": {
+        "node_id": "filter02",
+        "port_index": 0
+      }
+    },
+    {
+      "from": {
+        "node_id": "filter01",
+        "port_index": 0
+      },
+      "to": {
+        "node_id": "join01",
+        "port_index": 0
+      }
+    },
+    {
+      "from": {
+        "node_id": "filter02",
+        "port_index": 0
+      },
+      "to": {
+        "node_id": "join01",
+        "port_index": 1
+      }
+    },
+    {
+      "from": {
+        "node_id": "join01",
+        "port_index": 0
+      },
+      "to": {
+        "node_id": "project01",
+        "port_index": 0
+      }
+    },
+    {
+      "from": {
+        "node_id": "project01",
+        "port_index": 0
+      },
+      "to": {
+        "node_id": "s3writer01",
+        "port_index": 0
+      }
+    },
+    {
+      "from": {
+        "node_id": "project01",
+        "port_index": 0
+      },
+      "to": {
+        "node_id": "sfwriter01",
+        "port_index": 0
+      }
+    }
+  ]
+}

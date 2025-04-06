@@ -1,0 +1,135 @@
+{
+  "id": "bbf34cbb-9ee6-442f-80a8-22886b860933",
+  "metadata": {
+    "type": "batch",
+    "api_version": "1.0.0"
+  },
+  "nodes": [{
+      "id": "742743c3",
+      "component_info": {
+        "id": "r48dd54c",
+        "name": "ReadFile",
+        "version": "1.0"
+      },
+      "environment_key": "abc-def",
+      "conf" : {
+        "dataset": "employee"
+      }
+
+    },
+    {
+      "id": "a0b1",
+      "component_info": {
+        "id": "r48dd54c",
+        "name": "ReadFile",
+        "version": "1.0"
+      },
+      "environment_key": "abc-def",
+      "conf" : {
+        "dataset": "project"
+      }
+    },
+    {
+      "id": "c20f5b58",
+      "component_info": {
+        "id": "t8979sdf",
+        "name": "Filter",
+        "version": "1.0"
+      },
+      "environment_key": "abc-def",
+      "conf" : {
+        "dataframe": "project"
+      }
+    },
+    {
+      "id": "4193",
+      "component_info": {
+        "id": "t8979sdf",
+        "name": "Filter",
+        "version": "1.0"
+      },
+      "environment_key": "abc-def",
+      "conf" : {
+        "dataframe": "project"
+      }
+    },
+    {
+      "id": "11e5",
+      "component_info": {
+        "id": "t0909098",
+        "name": "Join",
+        "version": "1.0"
+      },
+      "environment_key": "abc-def",
+      "conf" : {
+        "joinTableSpecs": [
+          {"join_dataset" : "project_filter" , "join_fields" : {}, "join_type" : "inner" }
+        ]
+      }
+    },
+    {
+      "id": "feff819cdc9f",
+      "component_info": {
+        "id": "w273c42f",
+        "name": "WriteFile",
+        "version": "1.0"
+      },
+      "environment_key": "abc-def",
+      "conf" : {
+        "dataset": "employee"
+      }
+    }
+
+  ],
+  "connections": [{
+    "from": {
+      "node_id": "742743c3",
+      "port_index": 0
+    },
+    "to": {
+      "node_id": "c20f5b58",
+      "port_index": 0
+    }
+  },
+    {
+      "from": {
+        "node_id": "a0b1",
+        "port_index": 0
+      },
+      "to": {
+        "node_id": "4193",
+        "port_index": 0
+      }
+    },
+    {
+      "from": {
+        "node_id": "4193",
+        "port_index": 0
+      },
+      "to": {
+        "node_id": "11e5",
+        "port_index": 0
+      }
+    },
+    {
+      "from": {
+        "node_id": "c20f5b58",
+        "port_index": 0
+      },
+      "to": {
+        "node_id": "11e5",
+        "port_index": 1
+      }
+    },
+    {
+      "from": {
+        "node_id": "11e5",
+        "port_index": 0
+      },
+      "to": {
+        "node_id": "feff819cdc9f",
+        "port_index": 0
+      }
+    }
+  ]
+}

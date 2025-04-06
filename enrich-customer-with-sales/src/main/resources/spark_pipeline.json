@@ -1,0 +1,112 @@
+{
+  "id": "bbf34cbb-9ee6-442f-80a8-22886b860933",
+  "metadata": {
+    "type": "batch",
+    "api_version": "1.0.0"
+  },
+  "environments": [{
+    "id": "abc-def",
+    "info": {
+      "url": "r48dd54c",
+      "user": "ReadFile",
+      "pwd": "1.0"
+    }
+  }],
+  "nodes": [{
+      "id": "fileReader01",
+      "component_info": {
+        "id": "fileReader",
+        "name": "FileReader",
+        "version": "1.0"
+      },
+      "environment_key": "abc-def",
+      "entity": "employee",
+      "conf" : {
+        "fileName" : "/Users/ravi/ScalaProjects/enrich/data/customer/customers.csv",
+        "fileType" : "csv",
+        "header" : true,
+        "inferSchema" : true
+      }
+    },
+    {
+      "id": "fileReader02",
+      "component_info": {
+        "id": "fileReader",
+        "name": "FileReader",
+        "version": "1.0"
+      },
+      "environment_key": "abc-def",
+      "entity": "project",
+      "conf" : {
+        "fileName" : "/Users/ravi/ScalaProjects/enrich/data/sales",
+        "fileType" : "csv",
+        "header" : true,
+        "inferSchema" : true
+      }
+    },
+    {
+      "id": "join01",
+      "component_info": {
+        "id": "join",
+        "name": "Join",
+        "version": "1.0"
+      },
+      "environment_key": "abc-def",
+      "conf" : {
+        "join_criteria" : "Build Join Criteria"
+      }
+    },
+    {
+      "id": "output01",
+      "component_info": {
+        "id": "output",
+        "name": "FileWriter",
+        "version": "1.0"
+      },
+      "environment_key": "abc-def",
+      "entity": "employee_projects",
+      "conf" : {
+        "mapping": [
+          {
+            "col1" : "Build Mapping Criteria" ,
+            "col2" : "Build Mapping Criteria",
+            "col3" : "Build Mapping Criteria"
+          }
+        ]
+      }
+    }
+
+  ],
+  "connections": [
+    {
+      "from": {
+        "node_id": "fileReader01",
+        "port_index": 0
+      },
+      "to": {
+        "node_id": "join01",
+        "port_index": 0
+      }
+    },
+    {
+      "from": {
+        "node_id": "fileReader02",
+        "port_index": 0
+      },
+      "to": {
+        "node_id": "join01",
+        "port_index": 1
+      }
+    },
+    {
+      "from": {
+        "node_id": "join01",
+        "port_index": 0
+      },
+      "to": {
+        "node_id": "output01",
+        "port_index": 0
+      }
+    }
+  ]
+}

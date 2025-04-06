@@ -1,0 +1,6 @@
+environment: dev
+designer:
+  url: http://localhost
+  port: 8082
+logging:
+  enabled: false

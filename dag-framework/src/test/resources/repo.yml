@@ -1,0 +1,7 @@
+components:
+  r48dd54c-ReadFile-1.0: com.onelake.workflowexecutor.components.mock.ReadFileMock
+  t8979sdf-Filter-1.0: com.onelake.workflowexecutor.components.mock.FilterMock
+  t0909098-Join-1.0: com.onelake.workflowexecutor.components.mock.JoinMock
+  w273c42f-WriteFile-1.0: com.onelake.workflowexecutor.components.mock.WriteFileMock
+
+

@@ -1,0 +1,7 @@
+components:
+  fileReader-FileReader-1.0: data.pipeline.components.file.FileReaderComponent
+  filter-Filter-1.0: data.pipeline.components.filter.FilterComponent
+  join-Join-1.0: data.pipeline.components.join.JoinComponent
+  fileWriter-FileWriter-1.0: data.pipeline.components.file.FileWriterComponent
+  project-Project-1.0: data.pipeline.components.project.ProjectComponent
+  snowflake-SnowFlake-1.0: data.pipeline.components.database.SnowflakeWriterComponent
