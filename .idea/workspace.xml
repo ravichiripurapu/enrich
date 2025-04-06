@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0ed0dfc6-290d-48d6-b1e4-6b3961d21b7e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/spark-executor/src/main/scala/data/pipeline/components/JoinComponent.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spark-executor/src/main/scala/data/pipeline/components/OutputComponent.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enrich-customer-with-sales/enrich-customer-with-sales.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enrich-customer-with-sales/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/enrich-customer-with-sales/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/java/data/pipeline/customer/CustomerSalesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/java/data/pipeline/customer/CustomerSalesApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/resources/pipeline.json" beforeDir="false" afterPath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/resources/pipeline.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/resources/repo.yml" beforeDir="false" afterPath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/resources/repo.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/resources/repo1.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/resources/spark_pipeline.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-executor/spark-executor.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2vL6JgFDfDaWfWaSsnhpXf6dmYm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CustomerSalesApplication.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/ravi/ScalaProjects/enrich/spark-executor/src/main/scala/data/pipeline/components"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spark-executor/src/main/scala/data/pipeline/components" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="CustomerSalesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="data.pipeline.customer.CustomerSalesApplication" />
+      <module name="enrich-customer-with-sales" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="data.pipeline.customer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CustomerSalesApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0ed0dfc6-290d-48d6-b1e4-6b3961d21b7e" name="Changes" comment="" />
+      <created>1743911936904</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743911936904</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spark-executor/src/main/java/data/pipeline/executor/main/SparkDataPipeline.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spark-executor/src/main/java/data/pipeline/executor/main/SparkDataPipeline.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spark-executor/src/main/java/data/pipeline/executor/main/SparkDataPipeline.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spark-executor/src/main/java/data/pipeline/executor/main/SparkDataPipeline.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dag-framework/src/main/java/data/pipeline/api/util/GraphAPIService.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dag-framework/src/main/java/data/pipeline/api/util/GraphAPIService.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/spark-executor/src/main/scala/data/pipeline/components/file/FileReaderComponent.scala</url>
+          <line>20</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

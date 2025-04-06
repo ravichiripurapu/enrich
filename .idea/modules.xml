@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/enrich-customer-with-sales/enrich-customer-with-sales.iml" filepath="$PROJECT_DIR$/enrich-customer-with-sales/enrich-customer-with-sales.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enrich.iml" filepath="$PROJECT_DIR$/enrich.iml" />
     </modules>
   </component>
 </project>

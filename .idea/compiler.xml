@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spark-executor" />
+        <module name="enrich-customer-with-sales" />
         <module name="dag-framework" />
       </profile>
     </annotationProcessing>

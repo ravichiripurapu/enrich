@@ -13,6 +13,7 @@
     <modules>
         <module>dag-framework</module>
         <module>spark-executor</module>
+        <module>enrich-customer-with-sales</module>
     </modules>
 
     <properties>

@@ -13,63 +13,35 @@
     }
   }],
   "nodes": [{
-      "id": "filereader01",
+      "id": "fileReader01",
       "component_info": {
-        "id": "filereader",
+        "id": "fileReader",
         "name": "FileReader",
         "version": "1.0"
       },
       "environment_key": "abc-def",
       "entity": "employee",
       "conf" : {
-        "position" : 0,
-        "file_type" : "csv",
+        "fileName" : "/Users/ravi/ScalaProjects/enrich/data/customer/customers.csv",
+        "fileType" : "csv",
         "header" : true,
-        "apply_dq_checks" : true,
-        "dataset": "employee"
+        "inferSchema" : true
       }
     },
     {
-      "id": "filereader02",
+      "id": "fileReader02",
       "component_info": {
-        "id": "filereader",
+        "id": "fileReader",
         "name": "FileReader",
         "version": "1.0"
       },
       "environment_key": "abc-def",
       "entity": "project",
       "conf" : {
-        "position" : 1,
-        "file_type" : "avro",
-        "header" : false,
-        "apply_dq_checks" : true,
-        "dataset": "project"
-      }
-    },
-    {
-      "id": "filter01",
-      "component_info": {
-        "id": "filter",
-        "name": "Filter",
-        "version": "1.0"
-      },
-      "environment_key": "abc-def",
-      "entity" : "employee",
-      "conf" : {
-        "condition": "build query language for filtering"
-      }
-    },
-    {
-      "id": "filter02",
-      "component_info": {
-        "id": "filter",
-        "name": "Filter",
-        "version": "1.0"
-      },
-      "environment_key": "abc-def",
-      "entity" : "project",
-      "conf" : {
-        "condition": "build query language for filtering"
+        "fileName" : "/Users/ravi/ScalaProjects/enrich/data/sales/",
+        "fileType" : "csv",
+        "header" : true,
+        "inferSchema" : true
       }
     },
     {
@@ -85,10 +57,10 @@
       }
     },
     {
-      "id": "project01",
+      "id": "output01",
       "component_info": {
-        "id": "project",
-        "name": "Project",
+        "id": "output",
+        "name": "FileWriter",
         "version": "1.0"
       },
       "environment_key": "abc-def",
@@ -102,59 +74,13 @@
           }
         ]
       }
-    },
-    {
-      "id": "s3writer01",
-      "component_info": {
-        "id": "filewriter",
-        "name": "FileWriter",
-        "version": "1.0"
-      },
-      "environment_key": "abc-def",
-      "entity": "employee_projects",
-      "conf" : {
-        "file_location": "s3://....////..//"
-      }
-    },
-    {
-      "id": "sfwriter01",
-      "component_info": {
-        "id": "snowflake",
-        "name": "SnowFlake",
-        "version": "1.0"
-      },
-      "environment_key": "abc-def",
-      "entity": "employee_projects",
-      "conf" : {
-        "snowflake_table": "employee_projects"
-      }
     }
 
   ],
   "connections": [
     {
       "from": {
-        "node_id": "filereader01",
-        "port_index": 0
-      },
-      "to": {
-        "node_id": "filter01",
-        "port_index": 0
-      }
-    },
-    {
-      "from": {
-        "node_id": "filereader02",
-        "port_index": 0
-      },
-      "to": {
-        "node_id": "filter02",
-        "port_index": 0
-      }
-    },
-    {
-      "from": {
-        "node_id": "filter01",
+        "node_id": "fileReader01",
         "port_index": 0
       },
       "to": {
@@ -164,7 +90,7 @@
     },
     {
       "from": {
-        "node_id": "filter02",
+        "node_id": "fileReader02",
         "port_index": 0
       },
       "to": {
@@ -178,27 +104,7 @@
         "port_index": 0
       },
       "to": {
-        "node_id": "project01",
-        "port_index": 0
-      }
-    },
-    {
-      "from": {
-        "node_id": "project01",
-        "port_index": 0
-      },
-      "to": {
-        "node_id": "s3writer01",
-        "port_index": 0
-      }
-    },
-    {
-      "from": {
-        "node_id": "project01",
-        "port_index": 0
-      },
-      "to": {
-        "node_id": "sfwriter01",
+        "node_id": "output01",
         "port_index": 0
       }
     }
