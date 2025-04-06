@@ -5,26 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ed0dfc6-290d-48d6-b1e4-6b3961d21b7e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/spark-executor/src/main/scala/data/pipeline/components/JoinComponent.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spark-executor/src/main/scala/data/pipeline/components/OutputComponent.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enrich-customer-with-sales/enrich-customer-with-sales.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enrich-customer-with-sales/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/enrich-customer-with-sales/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/java/data/pipeline/customer/CustomerSalesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/java/data/pipeline/customer/CustomerSalesApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/resources/pipeline.json" beforeDir="false" afterPath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/resources/pipeline.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/resources/repo.yml" beforeDir="false" afterPath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/resources/repo.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/resources/repo1.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enrich-customer-with-sales/src/main/resources/spark_pipeline.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-executor/spark-executor.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-executor/src/main/scala/data/pipeline/components/file/FileWriterComponent.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark-executor/src/main/scala/data/pipeline/components/file/FileWriterComponent.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

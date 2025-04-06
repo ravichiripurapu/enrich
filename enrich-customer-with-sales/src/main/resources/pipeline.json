@@ -59,20 +59,17 @@
     {
       "id": "output01",
       "component_info": {
-        "id": "output",
+        "id": "fileWriter",
         "name": "FileWriter",
         "version": "1.0"
       },
       "environment_key": "abc-def",
       "entity": "employee_projects",
       "conf" : {
-        "mapping": [
-          {
-            "col1" : "Build Mapping Criteria" ,
-            "col2" : "Build Mapping Criteria",
-            "col3" : "Build Mapping Criteria"
-          }
-        ]
+        "fileName" : "/Users/ravi/ScalaProjects/enrich/data/results/csv/output_results.csv",
+        "fileType" : "csv",
+        "header" : true,
+        "inferSchema" : true
       }
     }
 
